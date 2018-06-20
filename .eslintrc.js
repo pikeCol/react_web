@@ -7,18 +7,20 @@ module.exports = {
     node: true,
     es6: true,
   },
-  extends: ['standard'],
-
+  extends: 'standard',
+  
   plugins: [
-    'html',
-    'vue'
+    'react'
   ],
   // add your custom rules here
   rules: {
     indent: [2, 2, { SwitchCase: 1, VariableDeclarator: 1 }],
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-unused-vars': 0,
+    // 'prop-types': [2]
   },
   globals: {
-    'require': true
+    'React': true,
+    'Container': true,
+    'ConnectedRouter': true
   }
 }
